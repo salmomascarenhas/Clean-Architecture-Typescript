@@ -1,2 +1,5 @@
-# NodeJS-CleanArchitecture-TDD
-Curso de Clean Architecture e TDD em NodeJS.
+# Clean-Architecture-Typescript
+Repositório de estudo usando:
+- TDD;
+- Clean Architecture;
+- Design Pattern.
