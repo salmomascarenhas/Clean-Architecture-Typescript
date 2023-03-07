@@ -4,7 +4,7 @@
   "description": "Curso de Clean Architecture e TDD em NodeJS.",
   "main": "index.js",
   "scripts": {
-    "jest": "jest --no-chace --watchAll"
+    "test": "jest --no-chace --watchAll"
   },
   "keywords": [],
   "author": "",
