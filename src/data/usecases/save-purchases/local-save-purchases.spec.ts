@@ -27,7 +27,7 @@ describe('LocalSavePurchases', () => {
         cacheStore.simulateDeleteError()
         const purchases = mockPurchases()
         const promise = sut.save(purchases)
-        expect(cacheStore.messages).toEqual([CacheStoreSpy.Message.delete])
+        expect(cacheStore.messages).toEqual([CacheStoreSpy.Action.delete])
         await expect(promise).rejects.toThrow()
     })
 
@@ -36,7 +36,7 @@ describe('LocalSavePurchases', () => {
         const { cacheStore, sut } = makeSut(timestamp)
         const purchases = mockPurchases()
         const promise = sut.save(purchases)
-        expect(cacheStore.messages).toEqual([CacheStoreSpy.Message.delete, CacheStoreSpy.Message.insert])
+        expect(cacheStore.messages).toEqual([CacheStoreSpy.Action.delete, CacheStoreSpy.Action.insert])
         expect(cacheStore.deleteKey).toBe('purchases')
         expect(cacheStore.insertKey).toBe('purchases')
         expect(cacheStore.insertValues).toEqual({
@@ -51,7 +51,7 @@ describe('LocalSavePurchases', () => {
         cacheStore.simulateInsertError()
         const purchases = mockPurchases()
         const promise = sut.save(purchases)
-        expect(cacheStore.messages).toEqual([CacheStoreSpy.Message.delete, CacheStoreSpy.Message.insert])
+        expect(cacheStore.messages).toEqual([CacheStoreSpy.Action.delete, CacheStoreSpy.Action.insert])
         await expect(promise).rejects.toThrow()
     })
 })
