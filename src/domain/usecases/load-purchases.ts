@@ -1,8 +1,8 @@
 import { PurchaseModel } from '@/domain/models'
 export interface LoadPurchases {
-    loadAll: () => Promise<Array<SavePurchases.Result>>
+    loadAll: () => Promise<Array<LoadPurchases.Result>>
 }
 
-export namespace SavePurchases {
+export namespace LoadPurchases {
     export type Result = PurchaseModel
 }
