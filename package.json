@@ -1,7 +1,7 @@
 {
-  "name": "clean-architecture-typescript",
+  "name": "clean-cache-control",
   "version": "1.0.0",
-  "description": "Curso de Clean Architecture e TDD em NodeJS.",
+  "description": "clean-cache-control.  ",
   "main": "index.js",
   "scripts": {
     "test": "jest --no-chace --watchAll"
